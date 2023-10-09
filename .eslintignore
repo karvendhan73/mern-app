@@ -1,0 +1,8 @@
+build
+dist
+coverage
+node_modules
+.snapshots/
+*.min.js
+.eslintrc.cjs
+*.config.js

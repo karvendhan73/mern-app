@@ -1,0 +1,21 @@
+{
+  "name": "My Portal",
+  "short_name": "Portal",
+  "description": "Customer portal for my products",
+  "start_url": "/dashboard",
+  "scope": "/",
+  "display": "browser",
+  "theme_color": "#003150",
+  "background_color": "#ecf5fd",
+  "orientation": "any",
+  "categories": "security,utilities",
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/icons/icon_48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }
+  ]
+}
