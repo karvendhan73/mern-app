@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
 function getSum(arr: number[]) {
   return arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 }
@@ -15,4 +18,5 @@ function splitNumber(num: number, parts: number) {
   return [];
 }
 
+window.splitNumber = splitNumber;
 export default splitNumber;

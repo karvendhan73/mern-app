@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
 function getNoOfMissingValues(arr: number[]) {
   return arr.filter((v) => v === 0).length;
 }
@@ -38,4 +41,5 @@ function determineMatchingSum(row1: number[], row2: number[]) {
   return -1;
 }
 
+window.determineMatchingSum = determineMatchingSum;
 export default determineMatchingSum;

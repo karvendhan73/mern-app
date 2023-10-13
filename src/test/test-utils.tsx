@@ -3,6 +3,7 @@
 import { render } from '@testing-library/react';
 import { FC, ReactElement, ReactNode } from 'react';
 import renderer, { TestRendererOptions } from 'react-test-renderer';
+declare type TestRendererType = typeof import('react-test-renderer');
 
 interface Props {
   children?: ReactNode;
@@ -17,7 +18,7 @@ const customRender = (ui: ReactElement, options = {}) => render(ui, { wrapper: A
 const customCreate = (ui: ReactElement, options?: TestRendererOptions) =>
   renderer.create(<AllProviders>{ui}</AllProviders>, options);
 
-const customRenderer = {
+const customRenderer: TestRendererType = {
   ...renderer,
   create: customCreate,
 };
