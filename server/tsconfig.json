@@ -1,0 +1,9 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "src",
+  },
+  "exclude": ["node_modules", "dist", "build"],
+  "include": ["src", "public"]
+}
