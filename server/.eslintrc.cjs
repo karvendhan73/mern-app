@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     node: true,
-    es2021: true,
+    es2022: true,
   },
   extends: [
     'eslint:recommended',
@@ -10,7 +10,6 @@ module.exports = {
     'plugin:json/recommended',
     'plugin:prettier/recommended'
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
@@ -30,6 +29,7 @@ module.exports = {
         ts: 'never',
       },
     ],
+    'no-console': 1,
     'prettier/prettier': 'error',
     'simple-import-sort/imports': [
       'error',

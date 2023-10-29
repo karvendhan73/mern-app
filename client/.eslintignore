@@ -1,6 +1,9 @@
+public
 build
 dist
 coverage
 node_modules
 .snapshots/
 *.min.js
+tsconfig.*json
+package.json

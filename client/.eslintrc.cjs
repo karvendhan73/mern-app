@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2022: true,
   },
   extends: [
     'eslint:recommended',
@@ -34,6 +34,7 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'no-console': 1,
     'prettier/prettier': 'error',
     'react-refresh/only-export-components': [
       'warn',

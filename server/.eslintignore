@@ -1,5 +1,10 @@
+public
 build
 dist
+coverage
 node_modules
 .snapshots/
-.eslintrc.cjs
+*.min.js
+tsconfig.*json
+package.json
+nodemon.json
