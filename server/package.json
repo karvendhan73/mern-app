@@ -5,6 +5,9 @@
   "author": "Karvendhan Shanmugam",
   "license": "MIT",
   "main": "dist/index.js",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "start:dev": "npx nodemon",
     "build": "rimraf dist && tsc",

@@ -2,9 +2,12 @@
   "name": "client",
   "private": true,
   "version": "1.0.0",
-  "type": "module",
   "author": "Karvendhan Shanmugam",
   "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "dev": "vite --open",
     "build": "tsc && vite build",
