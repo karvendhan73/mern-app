@@ -1,12 +1,19 @@
-import { useEffect } from 'react';
-import getTimes from '../../practice-area/get-times';
+import { useContext } from 'react';
+import { LanguagesContext } from '../../context/languages-context';
 
 function Sample() {
-  useEffect(() => {
-    console.log(getTimes([0, 1, 1, 3, 3], [0, 1, 0, 0, 1]));
-  }, []);
+  /** React hooks **/
+  const { language, toggleLanguage } = useContext(LanguagesContext);
 
-  return <div>This is Karvy</div>;
+  return (
+    <div>
+      <div>Kary&apos;s Expermients</div>
+      <div style={{ marginTop: 20 }}>Language: {language}</div>
+      <button style={{ marginTop: 5 }} onClick={() => toggleLanguage(language)}>
+        Toggle Language
+      </button>
+    </div>
+  );
 }
 
 export default Sample;

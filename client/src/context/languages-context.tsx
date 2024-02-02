@@ -1,4 +1,6 @@
-import { createContext, FC, ReactNode } from 'react';
+import { createContext, FC, ReactNode, useCallback, useState } from 'react';
+
+const languagesList = ['JavaScript', 'Python', 'Java', '.Net', 'C#'];
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const defaultValue = {
@@ -8,7 +10,7 @@ export const defaultValue = {
 
 type LanguagesContextType = {
   language: string;
-  toggleLanguage: () => void;
+  toggleLanguage: (language: string) => void;
 };
 
 interface ProviderProps {
@@ -17,7 +19,16 @@ interface ProviderProps {
 
 export const LanguagesContext = createContext<LanguagesContextType>(defaultValue);
 export const LanguagesProvider: FC<ProviderProps> = ({ children }) => {
-  return (
-    <LanguagesContext.Provider value={{ language: '', toggleLanguage: () => {} }}>{children}</LanguagesContext.Provider>
-  );
+  const toggleLanguage = useCallback((language: string) => {
+    const currentIndex = languagesList.indexOf(language);
+    const nextLanguage = languagesList[currentIndex + 1] || languagesList[0];
+    setContextValue({ ...contextValue, language: nextLanguage });
+  }, []);
+
+  const [contextValue, setContextValue] = useState<LanguagesContextType>({
+    language: languagesList[0],
+    toggleLanguage,
+  });
+
+  return <LanguagesContext.Provider value={contextValue}>{children}</LanguagesContext.Provider>;
 };
